@@ -12,7 +12,7 @@ export default function Weather() {
               className="form-control"
               placeholder="Search City"
               autocomplete="off"
-              autofocus="on"
+              autoFocus="on"
             />
             <input
               type="submit"
@@ -55,6 +55,7 @@ export default function Weather() {
               <img
                 src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
                 className="weather-icon"
+                alt="weather-icon"
               />
             </span>
           </div>

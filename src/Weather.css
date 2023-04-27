@@ -1,5 +1,4 @@
 .Weather {
-  margin: 0;
   padding: 10px 15px 20px;
   display: block;
   max-width: 650px;
@@ -13,7 +12,7 @@
   font-family: "Klee One", cursive;
 }
 
-h1 {
+.Weather h1 {
   color: aliceblue;
   font-weight: bold;
   font-size: 30px;
@@ -22,22 +21,94 @@ h1 {
   margin: 5px 5px 0 0;
 }
 
-p {
+.Weather p {
   text-align: right;
   color: aliceblue;
   margin: 0 0 10px 0;
   padding: 0 5px 10px;
   font-size: 18px;
 }
-ul {
+.Weather ul {
   margin: 0;
   padding: 0;
 }
-li {
+.Weather li {
   list-style: none;
   color: aliceblue;
   font-size: 16px;
 }
-a {
+.Weather a {
   text-decoration: none;
+}
+
+.Weather .current-temperature {
+  text-align: center;
+  color: aliceblue;
+  font-size: 70px;
+  margin-right: 5px;
+  line-height: 1;
+}
+
+.Weather .units {
+  position: relative;
+  top: -35px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.Weather .weather-icon {
+  position: relative;
+  bottom: -25px;
+  margin-left: -75px;
+}
+
+.Weather .current-low-high {
+  text-align: center;
+}
+
+.Weather .current-temperature {
+  text-align: center;
+  color: aliceblue;
+  font-size: 70px;
+  margin-right: 5px;
+  line-height: 1;
+}
+
+.Weather .current-humidity-wind {
+  text-align: center;
+}
+
+.Weather .current-weather {
+  color: aliceblue;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.Weather .current-temperature .active {
+  color: aliceblue;
+  cursor: default;
+}
+.Weather .current-temperature .active:hover {
+  text-decoration: none;
+}
+.Weather .search-city {
+  margin: 0 auto;
+}
+.Weather .form-control {
+  width: 180px;
+  margin: 5px 5px;
+  padding: 5px 5px;
+  float: left;
+}
+.Weather .btn-outline-primary {
+  border: none;
+  color: aliceblue;
+  float: left;
+  margin-top: 5px;
+}
+.Weather .btn-outline-primary:hover {
+  color: #557ae3;
+  background-color: aliceblue;
 }
