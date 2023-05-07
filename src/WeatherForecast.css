@@ -1,0 +1,25 @@
+.WeatherForecast hr {
+  color: rgb(95, 209, 249);
+  opacity: 0.3;
+}
+.WeatherForecast .weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: aliceblue;
+  font-weight: bold;
+}
+
+.WeatherForecast .weather-forecast-date {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.WeatherForecast .weather-forecast-temperatures {
+  font-size: 14px;
+  font-weight: bolder;
+  text-shadow: aliceblue;
+}
+
+.WeatherForecast .weather-forecast-temperature-low {
+  opacity: 0.6;
+}
