@@ -112,3 +112,8 @@
   color: #557ae3;
   background-color: aliceblue;
 }
+
+.Weather hr {
+  color: rgb(95, 209, 249);
+  opacity: 0.3;
+}

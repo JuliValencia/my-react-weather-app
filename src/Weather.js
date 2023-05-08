@@ -33,6 +33,7 @@ export default function Weather(props) {
   }
 
   function handleCityChange(event) {
+    event.preventDefault();
     setCity(event.target.value);
   }
   if (weatherData.ready) {
@@ -70,7 +71,8 @@ export default function Weather(props) {
           </div>
         </div>
         <WeatherInfo data={weatherData} />
-        <WeatherForecast />
+        <hr />
+        <WeatherForecast data={weatherData} />
       </div>
     );
   } else {
