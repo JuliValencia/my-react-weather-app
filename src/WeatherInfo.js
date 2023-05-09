@@ -6,12 +6,14 @@ export default function WeatherInfo(props) {
     <div className="WeatherInfo">
       <div className="row align-items-center">
         <div className="col-3">
-          <ul className="current-low-high">
-            <li className="weather-forecast-temperature-low">
-              L:<span>8</span>°
+          <ul className="current-feeling">
+            <li className="weather-forecast-feels-like">
+              <strong>Feels like:</strong>
+              <span>{Math.round(props.data.feelsLike)}</span>°
             </li>
-            <li className="weather-forecast-temperature-high">
-              H:<span>10</span>°
+            <li className="weather-forecast-pressure">
+              <strong> Pressure:</strong>
+              <span>{Math.round(props.data.pressure)}</span>mb
             </li>
           </ul>
         </div>
@@ -32,10 +34,11 @@ export default function WeatherInfo(props) {
         <div className="col-3">
           <ul className="current-humidity-wind">
             <li>
-              Humidity: <span>{props.data.humidity}</span>%
+              <strong>Humidity:</strong> <span>{props.data.humidity}</span>%
             </li>
             <li>
-              Wind: <span>{Math.round(props.data.wind)}</span>km/h
+              <strong> Wind:</strong> <span>{Math.round(props.data.wind)}</span>
+              km/h
             </li>
           </ul>
         </div>

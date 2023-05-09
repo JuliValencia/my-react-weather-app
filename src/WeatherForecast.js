@@ -8,23 +8,41 @@ export default function WeatherForecast(props) {
   let [forecast, setForecast] = useState(null);
 
   function handleResponse(response) {
+    console.log(response.data);
     setForecast(response.data.daily);
+    //let forecastIcon = response.data.daily.condition.icon_url;
     setLoaded(true);
   }
 
   if (loaded) {
+    console.log(forecast);
     return (
       <div className="WeatherForecast">
         <div className="row">
           <div className="col-2">
             <WeatherForecastDay data={forecast[0]} />
           </div>
+          <div className="col-2">
+            <WeatherForecastDay data={forecast[1]} />
+          </div>
+          <div className="col-2">
+            <WeatherForecastDay data={forecast[2]} />
+          </div>
+          <div className="col-2">
+            <WeatherForecastDay data={forecast[3]} />
+          </div>
+          <div className="col-2">
+            <WeatherForecastDay data={forecast[4]} />
+          </div>
+          <div className="col-2">
+            <WeatherForecastDay data={forecast[5]} />
+          </div>
         </div>
       </div>
     );
   } else {
+    let apiKey = "485cb8bac1atfac9f3b46bfdodfc3a40";
     let city = props.data.city;
-    let apiKey = `485cb8bac1atfac9f3b46bfdodfc3a40`;
     let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
 
     axios.get(apiUrl).then(handleResponse);
